@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include club_customization *.css
+recursive-include club_customization *.csv
+recursive-include club_customization *.html
+recursive-include club_customization *.ico
+recursive-include club_customization *.js
+recursive-include club_customization *.json
+recursive-include club_customization *.md
+recursive-include club_customization *.png
+recursive-include club_customization *.py
+recursive-include club_customization *.svg
+recursive-include club_customization *.txt
+recursive-exclude club_customization *.pyc
