@@ -107,7 +107,7 @@ override_doctype_class = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 #	"all": [
 #		"club_customization.tasks.all"
 #	],
@@ -121,9 +121,14 @@ override_doctype_class = {
 #		"club_customization.tasks.weekly"
 #	]
 #	"monthly": [
-#		"club_customization.tasks.monthly"
+#		"club_customization.tasks.monthly"         
 #	]
-# }
+    "cron": {
+        "1 0 1 7 *": [
+            "club_customization.overrides.custom_sales_invoice.renew_members_subscriptions"
+        ]
+    }
+}
 
 # Testing
 # -------
