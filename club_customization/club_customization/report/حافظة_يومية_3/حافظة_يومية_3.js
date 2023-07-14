@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 /* eslint-disable */
 
-frappe.query_reports["custom payment entry"] = {
+frappe.query_reports["حافظة يومية 3"] = {
   filters: [
     {
       fieldname: "name",

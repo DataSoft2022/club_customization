@@ -3,6 +3,7 @@
 
 import frappe
 
+
 def get_columns():
     columns = [{
         'fieldname': "name",
@@ -35,20 +36,21 @@ def get_columns():
         'fieldname': 'program',
         'label': 'Program',
         'fieldType': 'Data',
-    },{
+    }, {
         'fieldname': 'paid_amount',
         'label': 'Paid Amount',
         'fieldType': 'Data',
-    },{
+    }, {
         'fieldname': 'posting_date',
         'label': 'Posting Date',
         'fieldType': 'Date',
-    },{
+    }, {
         'fieldname': 'mode_of_payment',
         'label': 'Mode of Payment',
         'fieldType': 'Data',
     }]
     return columns
+
 
 def get_data(filters):
     query = f"""
@@ -72,12 +74,11 @@ def get_data(filters):
     and
     pe_j_rf.name like '%{filters.get("name", "")}%'
     """
-    
+
     data = frappe.db.sql(query, as_dict=1)
 
     return data
 
+
 def execute(filters=None):
     return get_columns(), get_data(filters)
-
-
