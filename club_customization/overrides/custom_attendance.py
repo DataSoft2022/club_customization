@@ -4,7 +4,7 @@ from erpnext.hr.doctype.attendance.attendance import Attendance
 
 class CustomAttendance(Attendance):
 
-    def before_submit(self):
+    def before_insert(self):
         if (self.in_time):
             in_time = str(self.in_time).split(' ')
             self.in_time_date = in_time[0]

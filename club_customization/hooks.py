@@ -87,10 +87,10 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
+override_doctype_class = {
 	# "ToDo": "custom_app.overrides.CustomToDo"
-	# "Attendance": "club_customization.overrides.custom_attendance.CustomAttendance"
-# }
+    "Attendance": "club_customization.overrides.custom_attendance.CustomAttendance"
+}
 
 # Document Events
 # ---------------
